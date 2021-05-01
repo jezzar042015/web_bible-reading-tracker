@@ -71,9 +71,10 @@ body {
     cursor: pointer;
 }
 
-.chapter-number:hover {
+/* .chapter-number:hover {
     background-color: lightslategrey;
-}
+} */
+
 .chap-num-text {
     display: inline-block;
     font-family: inherit;
