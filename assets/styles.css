@@ -6,6 +6,19 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+header {
+    /* position: sticky; */
+    top: 0;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+hr {
+    color: dimgrey;
+    border-style: solid;
+    border-width: .05px;
+}
+
 .main {
     height: 100%;
     width: 90%;
@@ -17,17 +30,18 @@ body {
 
 
 .book-title-container {
-    background-color: hsla(0, 0%, 24%, 0.973);
+    background-color: #3269a8;
     color: white;
     padding: 5px 5px 5px 20px;
     border-radius: 2px 2px 2px 2px;
     cursor: pointer;
     margin-bottom: 2px;
+    height: 35px;
 
 }
 
 .book-title-container:hover {
-    background-color: hsla(0, 1%, 16%, 0.973);    
+    background-color: #4287f5;    
 }
 
 .book-title-container:clicked {
@@ -56,14 +70,16 @@ body {
     justify-content: flex-start ;
     background-color: ghostwhite;
     overflow: auto;
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .chapter-number {
     display: flex;
-    height: 45px;
-    width: 45px;
-    background-color: dimgray;
+    height: 50px;
+    width: 50px;
+    background-color: #aaacb3;
     margin-right: 3px;
     margin-bottom: 3px;
     color: whitesmoke;
