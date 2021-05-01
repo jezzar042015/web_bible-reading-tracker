@@ -1,0 +1,91 @@
+
+body {
+    background-color: #b4b4b4;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+    height: 100%;
+    width: 70%;
+    margin-top: -10px;
+    padding: 15px 15px 15px 15px;
+    background-color: #ffffff;
+    
+}
+
+
+.book-title-container {
+    background-color: hsla(0, 0%, 24%, 0.973);
+    color: white;
+    padding: 5px 5px 5px 20px;
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+    margin-bottom: 2px;
+
+}
+
+.book-title-container:hover {
+    background-color: hsla(0, 1%, 16%, 0.973);    
+}
+
+.book-title-container:clicked {
+    background-color: orange;    
+}
+
+.bible-book-title {
+    display: inline;
+    height: 30px;
+    font-weight: 500;
+    
+}
+
+.expand-me {
+    display: inline-table;
+    font-family: inherit;
+    float: right;
+    position: relative;
+    right: 15px;
+
+}
+
+.chapters-wrapper {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-start ;
+    background-color: ghostwhite;
+    overflow: auto;
+    padding-left: 20px;
+}
+
+.chapter-number {
+    display: flex;
+    height: 45px;
+    width: 45px;
+    background-color: dimgray;
+    ;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.chapter-number:hover {
+    background-color: lightslategrey;
+}
+.chap-num-text {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 15px;
+    height: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.completed-chapter {
+    background-color: orange;
+}

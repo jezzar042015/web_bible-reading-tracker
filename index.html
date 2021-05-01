@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Reading Tracker</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="main">
+        <header>
+            <h1>Bible Reading Tracker</h1>
+        </header>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ge">
+                    <h3 class="bible-book-title">Genesis</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ge" data-chapters="50">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ex">
+                    <h3 class="bible-book-title">Exodus</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ex" data-chapters="40">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-le">
+                    <h3 class="bible-book-title">Leviticus</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-le" data-chapters="27">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-nu">
+                    <h3 class="bible-book-title">Numbers</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-nu" data-chapters="36">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-de">
+                    <h3 class="bible-book-title">Deuteronomy</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-de" data-chapters="34">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-jos">
+                    <h3 class="bible-book-title">Joshua</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-jos" data-chapters="24">
+                    </div>
+                
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <div class="book-title-container" id="b-jg">
+                    <h3 class="bible-book-title">Judges</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-jg" data-chapters="21">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ru">
+                    <h3 class="bible-book-title">Ruth</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ru" data-chapters="4">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-1sa">
+                    <h3 class="bible-book-title">1 Samuel</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-1sa" data-chapters="31">
+
+                    </div>
+                
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <div class="book-title-container" id="b-2sa">
+                    <h3 class="bible-book-title">2 Samuel</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-2sa" data-chapters="24">
+                    </div>
+                
+            </div>
+        </section>        
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-1ki">
+                    <h3 class="bible-book-title">1 Kings</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-1ki" data-chapters="22">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-2ki">
+                    <h3 class="bible-book-title">2 Kings</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-2ki" data-chapters="25">
+                    </div>
+                
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <div class="book-title-container" id="b-1ch">
+                    <h3 class="bible-book-title">1 Chronicles</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-1ch" data-chapters="29">
+                    </div>
+                
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <div class="book-title-container" id="b-2ch">
+                    <h3 class="bible-book-title">2 Chronicles</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-2ch" data-chapters="36">                     
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ezr">
+                    <h3 class="bible-book-title">Ezra</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ezr" data-chapters="10">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ne">
+                    <h3 class="bible-book-title">Nehemiah</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ne" data-chapters="12">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-es">
+                    <h3 class="bible-book-title">Esther</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-es" data-chapters="10">
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-job">
+                    <h3 class="bible-book-title">Job</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-job" data-chapters="42">
+                    </div>
+                
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ps">
+                    <h3 class="bible-book-title">Psalms</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ps" data-chapters="150">
+                    </div>
+                
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="book-title-container" id="b-pr">
+                    <h3 class="bible-book-title">Proverbs</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-pr" data-chapters="31">                        
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ec">
+                    <h3 class="bible-book-title">Ecclesiastes</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ec" data-chapters="12">
+                        
+                    </div>
+                
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ca">
+                    <h3 class="bible-book-title">Song of Solomon</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ca" data-chapters="8">
+                        
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-isa">
+                    <h3 class="bible-book-title">Isaiah</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-isa" data-chapters="66">
+                        
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-jer">
+                    <h3 class="bible-book-title">Jeremiah</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-jer" data-chapters="52"></div>            
+            </div>
+        </section>        
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-la">
+                    <h3 class="bible-book-title">Lamentations</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-la" data-chapters="5"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-eze">
+                    <h3 class="bible-book-title">Ezekiel</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-eze" data-chapters="48">
+                        
+                    </div>
+                
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <div class="book-title-container" id="b-da">
+                    <h3 class="bible-book-title">Daniel</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-da" data-chapters="12">
+                        
+                    </div>
+                
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ho">
+                    <h3 class="bible-book-title">Hosea</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ho" data-chapters="14">
+                        
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-joe">
+                    <h3 class="bible-book-title">Joel</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-joe" data-chapters="3">
+                        
+                    </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-am">
+                    <h3 class="bible-book-title">Amos</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-am" data-chapters="9"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ob">
+                    <h3 class="bible-book-title">Obidiah</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ob" data-chapters="1"></div>                
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-jon">
+                    <h3 class="bible-book-title">Jonah</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-jon" data-chapters="4"></div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="book-title-container" id="b-mic">
+                    <h3 class="bible-book-title">Micah</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-mic" data-chapters="7"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-na">
+                    <h3 class="bible-book-title">Nahum</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-na" data-chapters="3"></div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="book-title-container" id="b-hab">
+                    <h3 class="bible-book-title">Habakkuk</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-hab" data-chapters="3"></div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="book-title-container" id="b-zep">
+                    <h3 class="bible-book-title">Zephaniah</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-zep" data-chapters="3"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-hag">
+                    <h3 class="bible-book-title">Haggai</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-hag" data-chapters="2"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-zec">
+                    <h3 class="bible-book-title">Zechariah</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-zec" data-chapters="14"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-mal">
+                    <h3 class="bible-book-title">Malachi</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-mal" data-chapters="4"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-mt">
+                    <h3 class="bible-book-title">Matthew</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-mt" data-chapters="28"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-mr">
+                    <h3 class="bible-book-title">Mark</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-mr" data-chapters="16"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-lu">
+                    <h3 class="bible-book-title">Luke</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-lu" data-chapters="24"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-jo">
+                    <h3 class="bible-book-title">John</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-jo" data-chapters="21"></div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="book-title-container" id="b-ac">
+                    <h3 class="bible-book-title">Acts</h3>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                </div>    
+                    <div class="chapters-wrapper" id="c-ac" data-chapters="28"></div>
+            </div>
+        </section>        
+    </div>
+
+    <section>
+        <div>
+            <div class="book-title-container" id="b-ro">
+                <h3 class="bible-book-title">Romans</h3>
+                <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+            </div>    
+                <div class="chapters-wrapper" id="c-ro" data-chapters="16"></div>
+        </div>
+    </section>        
+</div>
+</body>
+
+<script src="https://kit.fontawesome.com/209b70da2c.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/scripts.js"></script>
+
+</html>
