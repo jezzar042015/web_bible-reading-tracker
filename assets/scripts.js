@@ -3,14 +3,28 @@
 window.onload = function () {
     var booknames = document.getElementsByClassName("book-title-container");
 
-    for (let i = 0; i < booknames.length; i++) {
-        booknames[i].onclick = function () {
-            expandBookSection (this.id.substring(2,this.id.length));
+        for (let i = 0; i < booknames.length; i++) {
+
+            var bookID = booknames[i].id.substring(2,booknames[i].id.length);
+
+            // assign onclick events/listener        
+                booknames[i].onclick = function () {
+                    expandBookSection (this.id.substring(2,this.id.length));
+                }
+            
+            // add progress bars
+                booknames[i].insertAdjacentHTML('beforeend', 
+                    '<div class="book-progress" id="p-' + bookID + '"></div>');
+            
+            // update width
+                updateProgressBar (bookID);
+
         }
-    }
 
     //initiating local storage to store progress
     initiateTrackingStorage();
+
+
 }
 
 function expandBookSection (bookID) {
@@ -34,6 +48,8 @@ function expandBookSection (bookID) {
      
     //indicate the completed chapters on selected section        
         indicateCompletedChapters(bookID);
+
+    
 }
 
 function collapseAll () {
@@ -69,6 +85,8 @@ function addChapters (bookID,chaptersCount) {
             }    else {
                 unreadChapter(this.id);
             }
+
+            updateProgressBar(bookID);
         }
     }
 
@@ -96,6 +114,35 @@ function indicateCompletedChapters (bookID){
             document.getElementById(completedChapters[i]).classList.add("completed-chapter");
         }
     }
+
+        
+}
+
+
+function updateProgressBar(bookID) {
+
+    //get the total chapters
+        var completedCount = countCompletedChapters(bookID)
+        var totalChapters = 
+            document.getElementById("c-"+bookID).dataset.chapters; 
+        var progressBarDiv = document.getElementById("p-" + bookID);
+
+        var progressRate = completedCount/totalChapters * 100;
+        progressBarDiv.style.width = progressRate + '%';
+}
+
+function countCompletedChapters(bookID) {
+    var completedChapters = JSON.parse(localStorage.getItem("read-chapters"));
+    var count = 0;
+
+    for (let i = 0; i < completedChapters.length; i++)
+    {
+        if (bookID == completedChapters[i].substring(0,completedChapters[i].indexOf('-'))) {
+            count++;
+        }
+    }
+
+    return count;
 }
 
 function addCompletedChapter (newChapter) {
@@ -119,4 +166,5 @@ function unreadChapter (chapterToRemove) {
         localStorage.setItem('read-chapters',JSON.stringify(completedChapters));
     //remove the class "completed-chapter" from the chapter
     document.getElementById(chapterToRemove).classList.remove("completed-chapter");
+
 }

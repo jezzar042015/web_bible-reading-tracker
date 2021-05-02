@@ -9,24 +9,29 @@
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+    <header>
+        <div class="main-title"  ><h1>BIBLE READING TRACKER</h1></div>
+        <p class="header-tip">Tap each chapter to track the progress of your Bible reading! Enjoy your daily Bible reading.</p>
+    </header>
+
     <div class="main">
-        <header>
-            <h1>Bible Reading Tracker</h1>
-            <p>Tap each chapter to track your Bible reading! Enjoy your daily Bible reading.</p>
-        </header>
-        <hr>
-        <div>
-            <p>HEBREW SCRIPTURES</p>
+
+        
+        <div class="bible-sections">
+            <p >HEBREW SCRIPTURES</p>
+            <hr>
         </div>
 
         <section>
             <div>
                 <div class="book-title-container" id="b-ge">
+                    
                     <h3 class="bible-book-title">Genesis</h3>
-                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>
+                    <span class="expand-me"><i class="fas fa-caret-down"></i></span>                    
+                    <!-- <div class="book-progress" id="p-ge"></div> -->
+
                 </div>    
-                    <div class="chapters-wrapper" id="c-ge" data-chapters="50">
-                    </div>
+                    <div class="chapters-wrapper" id="c-ge" data-chapters="50"></div>
                 
             </div>
         </section>
@@ -465,11 +470,13 @@
             </div>
         </section>
         
-        <hr>
-        <div>
-            <p>CHRISTIAN GREEK SCRIPTURES</p>
-        </div>
         
+        <div class="bible-sections">
+            <p >CHRISTIAN GREEK SCRIPTURES</p>
+            <hr>
+        </div>        
+        
+
         <section>
             <div>
                 <div class="book-title-container" id="b-mt">

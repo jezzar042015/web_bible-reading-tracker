@@ -1,28 +1,61 @@
 
+
+* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;    
+}
+
 body {
     background-color: #b4b4b4;
-    display: flex;
-    justify-content: center;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
-    /* position: sticky; */
-    top: 0;
-    margin-bottom: 40px;
+    max-width: 830px;
+    top: 0px;
+    margin-top: 0px;
+    margin: auto;
+    padding: 0px 0px 0px 0px;
     background-color: white;
+    height: 100px;
+}
+
+.main-title {
+    position: fixed;
+    top: 0px;
+    
+    height: auto;
+    background-color: rgba(53, 51, 51, 0.945);
+    color: white ;
+    padding: 10px  15px 10px 15px;
+    width: 800px;
+    max-width: 800px;
+    z-index: 1;
+}
+
+.main-title h1 {
+    font-size: 22px;
+    font-weight: 500;    
+}
+
+.header-tip {
+    padding-top: 60px;
+    padding-left: 15px;
 }
 
 hr {
-    color: dimgrey;
+    color: #9A9A9A;
     border-style: solid;
-    border-width: .05px;
+    border-width: .025px;
+
 }
 
 .main {
     height: 100%;
-    width: 90%;
-    margin-top: -10px;
+    max-width: 800px;
+    margin: auto;
     padding: 15px 15px 15px 15px;
     background-color: #ffffff;
     
@@ -30,8 +63,10 @@ hr {
 
 
 .book-title-container {
-    background-color: #3269a8;
+    /* background-color: #05826F; */
+    background-color: #05826F;
     color: white;
+    position: relative;
     padding: 10px 5px 5px 20px;
     border-radius: 2px 2px 2px 2px;
     cursor: pointer;
@@ -41,17 +76,27 @@ hr {
 }
 
 .book-title-container:hover {
-    background-color: #4287f5;    
+    background-color: #00ADAF;    
 }
 
-.book-title-container:clicked {
-    background-color: orange;    
+
+.book-progress {
+    background-color: #08a38c;
+    background-color: orange;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 10%;
+    border-radius: inherit;
 }
+
 
 .bible-book-title {
     display: inline;
     height: 30px;
     font-weight: 500;
+    color: white; 
     
 }
 
@@ -66,6 +111,7 @@ hr {
 
 .chapters-wrapper {
     display: none;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: flex-start ;
     background-color: ghostwhite;
@@ -103,5 +149,14 @@ hr {
 }
 
 .completed-chapter {
-    background-color: orange;
+    background-color: #FBB608;
+}
+
+.bible-sections {
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.bible-sections p {
+    font-size: 20px;
 }
