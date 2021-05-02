@@ -20,7 +20,11 @@ window.onload = function () {
                 updateProgressBar (bookID);
 
         }
-
+    
+    // assigning on click event on the summary switch
+    document.getElementById("summary-toggle").onclick = 
+        toggleSummaryDisplay;
+    
     //initiating local storage to store progress
     initiateTrackingStorage();
 
@@ -166,5 +170,28 @@ function unreadChapter (chapterToRemove) {
         localStorage.setItem('read-chapters',JSON.stringify(completedChapters));
     //remove the class "completed-chapter" from the chapter
     document.getElementById(chapterToRemove).classList.remove("completed-chapter");
+
+}
+
+
+function toggleSummaryDisplay () {
+    
+    var summarySwitch = document.getElementById("summary-toggle");
+    var summaryDiv = document.getElementById("summary-wrapper");
+
+    if (summarySwitch.classList.contains("fa-caret-down") === true) {
+        summarySwitch.classList.remove("fa-caret-down");
+        summarySwitch.classList.add("fa-caret-up");
+
+        summaryDiv.style.display = "block";
+    }   
+
+    else {
+        summarySwitch.classList.remove("fa-caret-up");
+        summarySwitch.classList.add("fa-caret-down");
+
+        summaryDiv.style.display = "none";
+    }
+
 
 }
