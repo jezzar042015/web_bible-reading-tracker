@@ -34,7 +34,7 @@ window.onload = function () {
 function expandBookSection (bookID) {
     
     // var currentSelection = document.getElementById("c-" + bookID);
-    currentSelection = document.querySelector("#c-" + bookID);
+    var currentSelection = document.querySelector("#c-" + bookID);
     var currentDisplay = currentSelection.style.display;
     
 
